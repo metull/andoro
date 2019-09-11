@@ -14,7 +14,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import static CheckProfile.GeneralData.AllParameters.EndPoints.*;
-import static CheckProfile.GeneralData.Data.*;
 import static CheckProfile.GeneralData.JsonBody.sendTrueBody.*;
 import static CheckProfile.TestOnlineProfile.TestSendProfileOnline.getJsonRequest;
 import static CheckProfile.TestOnlineProfile.TestSendProfileOnline.getResponse;
@@ -22,10 +21,6 @@ import static com.jayway.restassured.RestAssured.expect;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
-
-
-// DirectCredit.Api.Settings.isDebugMode=true;
-//DCLoans(11655, 'getPayment', {products: [{id:12, price:'47000', count:1,type:'Ноутбук'}]},function(a){console.log(a)},true);
 
 
 @Epic("Проверка отправляемых данных в Оффлайне анкете и сохранение их в БД")
@@ -54,26 +49,6 @@ public class TestSendProfileOffline {
         FileWriter fileWriter = new FileWriter("PHPSESSID.txt");
         fileWriter.write(responseBody1);
         fileWriter.close();
-    }
-
-//    public static String randomDate() {
-//        String dd = randomPhone(2);
-//        System.out.println(dd);
-//        String mm = randomPhone(2);
-//        System.out.println(mm);
-//        String yy = "19" + randomPhone(2);
-//        System.out.println(yy);
-//        String date = dd + mm + yy;
-//        System.out.println(date);
-//
-//        return date;
-//    }
-
-    public static void main(String[] args) {
-        System.out.println(randomEnglString(20));
-        System.out.println(randomPhone(20));
-        System.out.println(randomStringLitle(20));
-        System.out.println(randomCode(20));
     }
 
     @Test(dependsOnMethods = "getPHPHSESSSID")

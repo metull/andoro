@@ -54,9 +54,6 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
-//import static CheckProfile.GeneralData.SqlRequest.*;
-
-
 @Epic("Создаём заказ в Онлайне. Проверка отправляемых данных в Онлайн анкете и сохранение их в БД")
 public class TestSendProfileOnline {
 

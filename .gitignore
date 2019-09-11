@@ -1,0 +1,11 @@
+*.iml
+*.exe
+target/
+.allure/
+.idea/
+allure-results/
+numberOrder
+numberidOffline
+idOrder
+token
+token

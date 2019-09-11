@@ -10,8 +10,8 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>ApiJDK</groupId>
-    <artifactId>ApiJDK</artifactId>
+    <groupId>MavenOtherProject</groupId>
+    <artifactId>MavenOtherProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>AppiumBookBlog</name>
@@ -25,7 +25,7 @@
     </repositories>
     <properties>
 
-        <java.home>C:/Program Files/Java/jre-9.0.4</java.home>
+        <java.home>C:/Program Files/Java/jdk-9.0.4</java.home>
         <compiler.version>1.8</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
