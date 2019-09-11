@@ -1,8 +1,0 @@
-*.iml
-*.exe
-target/
-.allure/
-.idea/
-allure-results/
-*.txt
-*.xml
