@@ -206,7 +206,7 @@ public class TestSendProfileOffline {
     @Feature("Отправляем пустые/Невалидные поля при создании заказа")
     @Story("Создаём заказ в Оффлайне без Стоимости")
     @Description("Бэк возвращает \"Номер заказа: Номер заказа должен быть уникальным\" в место \"Стоимость: Поле не может быть пустым\"")
-    public void createOrderOfflineWithoutCosts() throws IOException {
+    public void createOrderOfflineWithoutCosts(){
         FileWriter fileWriterNumberOrder = new FileWriter("numberOfflineOrder.txt");
         fileWriterNumberOrder.write(numberOffline + "5");
         fileWriterNumberOrder.close();
@@ -466,6 +466,7 @@ public class TestSendProfileOffline {
         result = jsonObject.get("result").getAsString();
         assertThat(result).isEqualTo(valueTrue);
     }
+
     @Test(dependsOnMethods = "createNewOfflineOrder")
     @Feature("Отправляем шаг Профиль. Невалидные данные.")
     @Story("Отправляем завтрашнюю дату")

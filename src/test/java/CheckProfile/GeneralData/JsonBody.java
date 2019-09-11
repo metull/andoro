@@ -11,7 +11,6 @@ public class JsonBody {
     public static class sendTrueBody {
 
 
-
         public static String bodyCreatNewOdderWithoutProduct;
 
         static {
@@ -35,7 +34,6 @@ public class JsonBody {
         }
 
 
-
         public static String bodyCreatNewOdder;
 
         static {
@@ -49,13 +47,13 @@ public class JsonBody {
                         "            <ord:partnerID>11655</ord:partnerID>" +
                         "            <ord:order>numberOrder" + getNumberOrderOfFile() + "</ord:order>" +
                         "            <ord:codeTT>3</ord:codeTT>" +
-                        " <ord:goods>"+
-                        "               <ord:id>1234</ord:id>"+
-                        "               <ord:name>Товар Для заказа в Озоне</ord:name>"+
-                        "               <ord:price>35000.00</ord:price>"+
-                        "               <ord:quantity>1</ord:quantity>"+
-                        "               <ord:type>телефоны iphone</ord:type>"+
-                        "            </ord:goods>"+
+                        " <ord:goods>" +
+                        "               <ord:id>1234</ord:id>" +
+                        "               <ord:name>Товар Для заказа в Озоне</ord:name>" +
+                        "               <ord:price>35000.00</ord:price>" +
+                        "               <ord:quantity>1</ord:quantity>" +
+                        "               <ord:type>телефоны iphone</ord:type>" +
+                        "            </ord:goods>" +
                         "        </ord:data>" +
                         "     </ord:createOrder>" +
                         "   </soapenv:Body>" +
@@ -64,13 +62,14 @@ public class JsonBody {
                 e.printStackTrace();
             }
         }
+
         public static String createNewOfflineOrder;
 
         static {
             try {
                 createNewOfflineOrder = "{" +
                         "\"order\":{" +
-                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "1"  + "\"," +
+                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "1" + "\"," +
                         "\"outlet_store\":\"" + getOutlet_store() + "\"" +
                         "}," +
                         "\"goods\":[{" +
@@ -104,7 +103,7 @@ public class JsonBody {
             try {
                 createOrderOfflineWithoutOutletStore = "{" +
                         "\"order\":{" +
-                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "2"  + "\"," +
+                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "2" + "\"," +
                         "\"outlet_store\":\"\"" +
                         "}," +
                         "\"goods\":[{" +
@@ -125,7 +124,7 @@ public class JsonBody {
             try {
                 createOrderOfflineWithoutNameProduct = "{" +
                         "\"order\":{" +
-                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "3"  + "\"," +
+                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "3" + "\"," +
                         "\"outlet_store\":\"" + getOutlet_store() + "\"" +
                         "}," +
                         "\"goods\":[{" +
@@ -146,7 +145,7 @@ public class JsonBody {
             try {
                 createOrderOfflineWithoutTypeProduct = "{" +
                         "\"order\":{" +
-                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "4"  + "\"," +
+                        "\"order_number\":\"" + getNumberOfflineOrderOfFile() + "4" + "\"," +
                         "\"outlet_store\":\"" + getOutlet_store() + "\"" +
                         "}," +
                         "\"goods\":[{" +
@@ -429,7 +428,7 @@ public class JsonBody {
         public static String sendStepPersonalDataWithSimbolsInFirstName = "" +
                 "{" +
                 "\"fio\":{" +
-                "\"last_name\":\"" + getLast_name() +"\"," +
+                "\"last_name\":\"" + getLast_name() + "\"," +
                 "\"first_name\":\"" + getFirst_name() + manyRandomSimbols(3) + "\"," +
                 "\"second_name\":\"" + getSecond_name() + "\"" +
                 "}," +
@@ -447,7 +446,7 @@ public class JsonBody {
         public static String sendStepPersonalDataWithSimbolsInSecondName = "" +
                 "{" +
                 "\"fio\":{" +
-                "\"last_name\":\"" + getLast_name() +"\"," +
+                "\"last_name\":\"" + getLast_name() + "\"," +
                 "\"first_name\":\"" + getFirst_name() + "\"," +
                 "\"second_name\":\"" + getSecond_name() + manyRandomSimbols(3) + "\"" +
                 "}," +
@@ -1598,7 +1597,7 @@ public class JsonBody {
                 "}" +
                 "}," +
                 "\"costgroup\":{" +
-                "\"costs\":\"" + getCosts() +"\"," +
+                "\"costs\":\"" + getCosts() + "\"," +
                 "\"mother_last_name\":\"" + getMother_last_name() + randomEnglString(5) + "\"," +
                 "\"customer_estimate\":\"" + getCustomer_estimate() + "\"" +
                 "}" +
@@ -8547,101 +8546,102 @@ public class JsonBody {
                 "}" +
                 "}";
 
-/** Новый запрос (вместе с 69)
-                 public static String sendCalculator = "" +
-                "{" +
-                "\"loan_term\":25," +
-                "\"down_payment\":12," +
-                "\"loans\":[{" +
-                "\"id\":\"49148037\"," +
-                "\"bankId\":\"59113\"," +
-                "\"services\":[{" +
-                "\"code\":\"tin_sms_service\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"sms\":true," +
-                "\"insurances\":[{" +
-                "\"code\":\"medical_newOTPofl\"," +
-                "\"isEnable\":true" +
-                "}," +
-                "{" +
-                "\"code\":\"worknewoflMV\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"special\":false" +
-                "}," +
-                "{" +
-                "\"id\":\"369497209\"," +
-                "\"bankId\":\"8170\"," +
-                "\"services\":[{" +
-                "\"code\":\"rsb_sms_service\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"sms\":true," +
-                "\"insurances\":[{" +
-                "\"code\":\"medical_newOTPofl\"," +
-                "\"isEnable\":true" +
-                "}," +
-                "{" +
-                "\"code\":\"worknewoflMV\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"special\":false}," +
-                "{" +
-                "\"id\":\"366519293\"," +
-                "\"bankId\":\"3742\"," +
-                "\"services\":[{" +
-                "\"code\":\"exp_sms_service\"," +
-                "\"isEnable\":true}]," +
-                "\"sms\":true," +
-                "\"insurances\":[{" +
-                "\"code\":\"medical_newOTPofl\"," +
-                "\"isEnable\":true}," +
-                "{" +
-                "\"code\":\"worknewoflMV\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"special\":false" +
-                "}," +
-                "{" +
-                "\"id\":\"383366783\"," +
-                "\"bankId\":\"3319182\"," +
-                "\"services\":[{" +
-                "\"code\":\"mts_sms_service\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"sms\":true," +
-                "\"insurances\":[{" +
-                "\"code\":\"medical_newOTPofl\"," +
-                "\"isEnable\":true" +
-                "}," +
-                "{" +
-                "\"code\":\"worknewoflMV\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"special\":false" +
-                "}," +
-                "{" +
-                "\"id\":\"23129357\"," +
-                "\"bankId\":\"1\"," +
-                "\"services\":[{" +
-                "\"code\":\"ren_sms_comfort\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"sms\":true," +
-                "\"insurances\":[{" +
-                "\"code\":\"medical_newOTPofl\"," +
-                "\"isEnable\":true}," +
-                "{" +
-                "\"code\":\"worknewoflMV\"," +
-                "\"isEnable\":true" +
-                "}]," +
-                "\"special\":false" +
-                "}]," +
-                "\"promo\":null," +
-                "\"insurance_notbank\":[]" +
-                "}";
-*/
+        /**
+         * Новый запрос (вместе с 69)
+         * public static String sendCalculator = "" +
+         * "{" +
+         * "\"loan_term\":25," +
+         * "\"down_payment\":12," +
+         * "\"loans\":[{" +
+         * "\"id\":\"49148037\"," +
+         * "\"bankId\":\"59113\"," +
+         * "\"services\":[{" +
+         * "\"code\":\"tin_sms_service\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"sms\":true," +
+         * "\"insurances\":[{" +
+         * "\"code\":\"medical_newOTPofl\"," +
+         * "\"isEnable\":true" +
+         * "}," +
+         * "{" +
+         * "\"code\":\"worknewoflMV\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"special\":false" +
+         * "}," +
+         * "{" +
+         * "\"id\":\"369497209\"," +
+         * "\"bankId\":\"8170\"," +
+         * "\"services\":[{" +
+         * "\"code\":\"rsb_sms_service\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"sms\":true," +
+         * "\"insurances\":[{" +
+         * "\"code\":\"medical_newOTPofl\"," +
+         * "\"isEnable\":true" +
+         * "}," +
+         * "{" +
+         * "\"code\":\"worknewoflMV\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"special\":false}," +
+         * "{" +
+         * "\"id\":\"366519293\"," +
+         * "\"bankId\":\"3742\"," +
+         * "\"services\":[{" +
+         * "\"code\":\"exp_sms_service\"," +
+         * "\"isEnable\":true}]," +
+         * "\"sms\":true," +
+         * "\"insurances\":[{" +
+         * "\"code\":\"medical_newOTPofl\"," +
+         * "\"isEnable\":true}," +
+         * "{" +
+         * "\"code\":\"worknewoflMV\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"special\":false" +
+         * "}," +
+         * "{" +
+         * "\"id\":\"383366783\"," +
+         * "\"bankId\":\"3319182\"," +
+         * "\"services\":[{" +
+         * "\"code\":\"mts_sms_service\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"sms\":true," +
+         * "\"insurances\":[{" +
+         * "\"code\":\"medical_newOTPofl\"," +
+         * "\"isEnable\":true" +
+         * "}," +
+         * "{" +
+         * "\"code\":\"worknewoflMV\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"special\":false" +
+         * "}," +
+         * "{" +
+         * "\"id\":\"23129357\"," +
+         * "\"bankId\":\"1\"," +
+         * "\"services\":[{" +
+         * "\"code\":\"ren_sms_comfort\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"sms\":true," +
+         * "\"insurances\":[{" +
+         * "\"code\":\"medical_newOTPofl\"," +
+         * "\"isEnable\":true}," +
+         * "{" +
+         * "\"code\":\"worknewoflMV\"," +
+         * "\"isEnable\":true" +
+         * "}]," +
+         * "\"special\":false" +
+         * "}]," +
+         * "\"promo\":null," +
+         * "\"insurance_notbank\":[]" +
+         * "}";
+         */
 //        Старый запрос (до 69)
 
 

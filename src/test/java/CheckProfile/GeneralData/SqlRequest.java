@@ -6,11 +6,10 @@ import static CheckProfile.GeneralData.AllParameters.EndPoints.*;
 
 public class SqlRequest {
 
-    private static Statement stmt;
-    private static ResultSet rs;
-
-    public static String getValueOfTable(String query) throws SQLException {
-        Connection con = null;
+    public static String getValueOfTable(String query) {
+        Statement stmt;
+        ResultSet rs;
+        Connection con;
         String count = null;
         try {
             con = DriverManager.getConnection(url, username, password);

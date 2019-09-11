@@ -71,7 +71,7 @@ public class TestSendProfileOnline {
     @Feature("Создаём заказ в Онлайне")
     @Story("Создание заказа")
     @Severity(value = SeverityLevel.BLOCKER)
-    public void createNewOrder() throws SQLException, IOException {
+    public void createNewOrder() throws IOException {
         FileWriter fileWriterNumberOrder = new FileWriter("numberOrder.txt");
         fileWriterNumberOrder.write(number);
         fileWriterNumberOrder.close();
@@ -971,7 +971,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "calculator")
     @Feature("Отправка всех полей СК анкеты")
     @Story("Отправка по СК анкете. Переходим на 2 шаг анкеты.")
-    public void sendStep1() throws IOException, SQLException {
+    public void sendStep1() throws IOException {
         send = BasePath + step1 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -1592,7 +1592,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendInvalidBirthday2")
     @Feature("Отправка всех полей К анкеты")
     @Story("Отправляем валидный Json. Переходим на 3 шаг анкеты.")
-    public void sendStep2() throws IOException, SQLException {
+    public void sendStep2() throws IOException {
         send = BasePath + step2 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2190,7 +2190,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "withoutSocialStatus")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем валидный Json.")
-    public void sendStep3() throws IOException, JSONException, SQLException {
+    public void sendStep3() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2382,7 +2382,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Разнорабочий")
-    public void sendSocialStatusrQrxbFSC() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusrQrxbFSC() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2413,7 +2413,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Не работаю")
-    public void sendSocialStatusDrBuzeAn() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusDrBuzeAn() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2444,7 +2444,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Студент")
-    public void sendSocialStatus1r8IYIt8() throws IOException, JSONException, SQLException {
+    public void sendSocialStatus1r8IYIt8() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2475,7 +2475,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Пенсионер")
-    public void sendSocialStatus0vxo1sNN() throws IOException, JSONException, SQLException {
+    public void sendSocialStatus0vxo1sNN() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2506,7 +2506,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Домохозяйка")
-    public void sendSocialStatusJ6VBpaeU() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusJ6VBpaeU() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2537,7 +2537,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Коммерческий сотрудник")
-    public void sendSocialStatusKwt5ypR2() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusKwt5ypR2() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2568,7 +2568,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Предприниматель")
-    public void sendSocialStatusokcnc8te() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusokcnc8te() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2599,7 +2599,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Декретный отпуск")
-    public void sendSocialStatusbX2QDLZE() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusbX2QDLZE() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2630,7 +2630,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Отправляем соц статус Государственный служащий")
-    public void sendSocialStatuslhPLvIuA() throws IOException, JSONException, SQLException {
+    public void sendSocialStatuslhPLvIuA() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2661,7 +2661,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус ИП/Частная практика")
-    public void sendSocialStatusmtsip2() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusmtsip2() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2692,7 +2692,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправляем соц статус Собственник/совладелец компании")
-    public void sendSocialStatusmtsowner() throws IOException, JSONException, SQLException {
+    public void sendSocialStatusmtsowner() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2723,7 +2723,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Нет")
-    public void sendEducationiMX4K9nC() throws IOException, JSONException, SQLException {
+    public void sendEducationiMX4K9nC() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2754,7 +2754,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Начальное или незаконченное среднее")
-    public void sendEducation864JGulJ() throws IOException, JSONException, SQLException {
+    public void sendEducation864JGulJ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2785,7 +2785,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Среднее")
-    public void sendEducationjcolhX0Z() throws IOException, JSONException, SQLException {
+    public void sendEducationjcolhX0Z() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2816,7 +2816,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Среднетехническое")
-    public void sendEducationjjqjrJTK() throws IOException, JSONException, SQLException {
+    public void sendEducationjjqjrJTK() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2847,7 +2847,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Специальное техническое")
-    public void sendEducationtFQILYCv() throws IOException, JSONException, SQLException {
+    public void sendEducationtFQILYCv() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2878,7 +2878,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Незаконченное высшее")
-    public void sendEducation57Paul47() throws IOException, JSONException, SQLException {
+    public void sendEducation57Paul47() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2909,7 +2909,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Высшее")
-    public void sendEducationAJZRN1S4() throws IOException, JSONException, SQLException {
+    public void sendEducationAJZRN1S4() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2940,7 +2940,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Второе высшее")
-    public void sendEducation8IDMA3HA() throws IOException, JSONException, SQLException {
+    public void sendEducation8IDMA3HA() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -2971,7 +2971,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка образования Степень")
-    public void sendEducationnI429G0N() throws IOException, JSONException, SQLException {
+    public void sendEducationnI429G0N() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3002,7 +3002,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Бытовые услуги")
-    public void sendBusinessType9JL0CJaJ() throws IOException, JSONException, SQLException {
+    public void sendBusinessType9JL0CJaJ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3033,7 +3033,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Вооруженные силы")
-    public void sendBusinessTypeYbZ9AkwY() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeYbZ9AkwY() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3064,7 +3064,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Гос.и муниципальные структуры")
-    public void sendBusinessTypeGYwOPZHc() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeGYwOPZHc() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3095,7 +3095,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Детективное, охранное предприятие")
-    public void sendBusinessTypezfKLutAC() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypezfKLutAC() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3126,7 +3126,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации ЖКХ")
-    public void sendBusinessTypewqLuaWF5() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypewqLuaWF5() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3157,7 +3157,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Здравоохранение")
-    public void sendBusinessTyperJ53DhFk() throws IOException, JSONException, SQLException {
+    public void sendBusinessTyperJ53DhFk() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3188,7 +3188,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Издательская деятельность")
-    public void sendBusinessTypeTLnIGYrA() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeTLnIGYrA() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3219,7 +3219,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Информационные технологии")
-    public void sendBusinessTypeMZHlWynW() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeMZHlWynW() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3250,7 +3250,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Легкая промышленность")
-    public void sendBusinessTypeT3eM0HYh() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeT3eM0HYh() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3281,7 +3281,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Лесное хозяйство")
-    public void sendBusinessTypeMRDuHN8B() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeMRDuHN8B() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3312,7 +3312,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Машиностроение, металлургия")
-    public void sendBusinessTypeRI4dVLx7() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeRI4dVLx7() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3343,7 +3343,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Образование и наука")
-    public void sendBusinessTypeqUvTRUyI() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeqUvTRUyI() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3374,7 +3374,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Оптовая торговля")
-    public void sendBusinessTypeSXSvcWC0() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeSXSvcWC0() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3405,7 +3405,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Пищевая промышленность")
-    public void sendBusinessTypebUvScCuH() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypebUvScCuH() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3436,7 +3436,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Полиграфическая промышленность")
-    public void sendBusinessTypeg8sPMDIf() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeg8sPMDIf() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3467,7 +3467,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Посредническая деятельность")
-    public void sendBusinessTypeYwy3KLwt() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeYwy3KLwt() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3498,7 +3498,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Правоохранительные органы")
-    public void sendBusinessTypeQdOlqnJy() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeQdOlqnJy() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3529,7 +3529,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Реклама, PR агентства, СМИ")
-    public void sendBusinessTypeGBE8nNMU() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeGBE8nNMU() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3560,7 +3560,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Рестораны, кафе")
-    public void sendBusinessType7hOyZaSi() throws IOException, JSONException, SQLException {
+    public void sendBusinessType7hOyZaSi() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3591,7 +3591,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Розничная торговля")
-    public void sendBusinessTypeV9SXT6aF() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeV9SXT6aF() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3622,7 +3622,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Салоны красоты, фитнес-центры")
-    public void sendBusinessTypeSdvuwza2() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeSdvuwza2() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3653,7 +3653,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Связь")
-    public void sendBusinessTyper9v180sZ() throws IOException, JSONException, SQLException {
+    public void sendBusinessTyper9v180sZ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3684,7 +3684,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Сельское хозяйство")
-    public void sendBusinessTypegusuzCJ6() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypegusuzCJ6() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3715,7 +3715,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Строительство, строительные материалы")
-    public void sendBusinessTypexomrEYGH() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypexomrEYGH() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3746,7 +3746,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Транспорт")
-    public void sendBusinessTypespZgk3vs() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypespZgk3vs() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3777,7 +3777,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации ТЭК, горнодобывающая промышленность")
-    public void sendBusinessTypeURpGBtDS() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeURpGBtDS() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3808,7 +3808,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Увеселительный, шоу-бизнес, туризм")
-    public void sendBusinessTypekiZh51bJ() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypekiZh51bJ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3839,7 +3839,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Финансы, банковское дело")
-    public void sendBusinessType3CQJza5Y() throws IOException, JSONException, SQLException {
+    public void sendBusinessType3CQJza5Y() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3870,7 +3870,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Юридические услуги")
-    public void sendBusinessTypePmApfVXO() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypePmApfVXO() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3901,7 +3901,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Другое")
-    public void sendBusinessTypeXrsTOwWt() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeXrsTOwWt() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3932,7 +3932,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Игорный бизнес")
-    public void sendBusinessTypeCFgxtHBa() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeCFgxtHBa() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3963,7 +3963,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Страхование")
-    public void sendBusinessTypeyi2BL42u() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeyi2BL42u() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -3994,7 +3994,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Благотворительные и религиозные организации")
-    public void sendBusinessTypezp9P7jO8() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypezp9P7jO8() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4025,7 +4025,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Подбор персонала")
-    public void sendBusinessTypeLFKbshBl() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypeLFKbshBl() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4056,7 +4056,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Химия, парфюмерия, фармацевтика")
-    public void sendBusinessTypemtschymistry() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtschymistry() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4087,7 +4087,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Производство и распределение электроэнергии, газа, воды")
-    public void sendBusinessTypemtsenergy() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtsenergy() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4118,7 +4118,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Производство строительных материалов")
-    public void sendBusinessTypemtsconstrmaterials() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtsconstrmaterials() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4149,7 +4149,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Складское хранение и логистика")
-    public void sendBusinessTypemtslogistics2() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtslogistics2() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4180,7 +4180,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Операции с недвижимостью")
-    public void sendBusinessTypemtsseo() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtsseo() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4211,7 +4211,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка вид деятельности организации Аудит, консталтинг")
-    public void sendBusinessTypemtsaudit() throws IOException, JSONException, SQLException {
+    public void sendBusinessTypemtsaudit() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4242,7 +4242,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Собственность")
-    public void sendPropertyTypeOBwD06es() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeOBwD06es() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4273,7 +4273,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Аренда")
-    public void sendPropertyTypeZo8buZRw() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeZo8buZRw() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4304,7 +4304,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Проживаю у родственников")
-    public void sendPropertyType73neHtC3() throws IOException, JSONException, SQLException {
+    public void sendPropertyType73neHtC3() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4335,7 +4335,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Предоставляется работодателем")
-    public void sendPropertyType2f2ATRAL() throws IOException, JSONException, SQLException {
+    public void sendPropertyType2f2ATRAL() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4366,7 +4366,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Оплачено более 6 мес")
-    public void sendPropertyTypeikgSPiQC() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeikgSPiQC() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4397,7 +4397,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Общежитие (Студент)")
-    public void sendPropertyTypeuv4It78N() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeuv4It78N() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4428,7 +4428,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Собственность в залоге")
-    public void sendPropertyTypeu6Ks36W0() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeu6Ks36W0() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4459,7 +4459,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Муниципальное жилье")
-    public void sendPropertyTypeSnQ0Vb2X() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeSnQ0Vb2X() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4490,7 +4490,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Другое")
-    public void sendPropertyTypeYCOipzlk() throws IOException, JSONException, SQLException {
+    public void sendPropertyTypeYCOipzlk() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4521,7 +4521,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Младший специалист")
-    public void sendPositionTyperZ0E4mZP() throws IOException, JSONException, SQLException {
+    public void sendPositionTyperZ0E4mZP() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4552,7 +4552,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Специалист")
-    public void sendPositionTypeLdclPMjJ() throws IOException, JSONException, SQLException {
+    public void sendPositionTypeLdclPMjJ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4583,7 +4583,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Старший специалист")
-    public void sendPositionTypecEGMbybk() throws IOException, JSONException, SQLException {
+    public void sendPositionTypecEGMbybk() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4614,7 +4614,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Начинающий руководитель")
-    public void sendPositionTypenbzIyADA() throws IOException, JSONException, SQLException {
+    public void sendPositionTypenbzIyADA() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4645,7 +4645,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Руководитель с опытом")
-    public void sendPositionTypemjwE1TnM() throws IOException, JSONException, SQLException {
+    public void sendPositionTypemjwE1TnM() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4676,7 +4676,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Тип недвижимости по месту проживания Руководитель высшего звена")
-    public void sendPositionTypeau38D9bk() throws IOException, JSONException, SQLException {
+    public void sendPositionTypeau38D9bk() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4707,7 +4707,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Женат/замужем")
-    public void sendMaritalStatus5KvUof3u() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatus5KvUof3u() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4738,7 +4738,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Холост/не замужем")
-    public void sendMaritalStatusltS0HkZ6() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatusltS0HkZ6() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4769,7 +4769,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Разведен/разведена")
-    public void sendMaritalStatusADoBCpAh() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatusADoBCpAh() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4800,7 +4800,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Раздельное проживание")
-    public void sendMaritalStatusXCuGVp6h() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatusXCuGVp6h() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4831,7 +4831,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Вдова/вдовец")
-    public void sendMaritalStatuspfQr7U3s() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatuspfQr7U3s() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4862,7 +4862,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Семейное положение Гражданский брак")
-    public void sendMaritalStatus0LqzSuFm() throws IOException, JSONException, SQLException {
+    public void sendMaritalStatus0LqzSuFm() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4893,7 +4893,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Дача")
-    public void sendRealEstateGZMHLndD() throws IOException, JSONException, SQLException {
+    public void sendRealEstateGZMHLndD() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4924,7 +4924,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Земельный участок")
-    public void sendRealEstateOMeoKbkl() throws IOException, JSONException, SQLException {
+    public void sendRealEstateOMeoKbkl() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4955,7 +4955,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Гараж")
-    public void sendRealEstatergLt8p2r() throws IOException, JSONException, SQLException {
+    public void sendRealEstatergLt8p2r() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -4986,7 +4986,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Квартира")
-    public void sendRealEstate3NTeSzKj() throws IOException, JSONException, SQLException {
+    public void sendRealEstate3NTeSzKj() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5017,7 +5017,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Другое")
-    public void sendRealEstateIHmTXb7L() throws IOException, JSONException, SQLException {
+    public void sendRealEstateIHmTXb7L() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5048,7 +5048,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка другая недвижимость Комната")
-    public void sendRealEstateroommts() throws IOException, JSONException, SQLException {
+    public void sendRealEstateroommts() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5079,7 +5079,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Бабушка")
-    public void sendRelationDegree7q9E0NKr() throws IOException, JSONException, SQLException {
+    public void sendRelationDegree7q9E0NKr() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5110,7 +5110,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Брат")
-    public void sendRelationDegreeY1mQPKVz() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreeY1mQPKVz() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5141,7 +5141,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Дедушка")
-    public void sendRelationDegreeLnxmURg4() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreeLnxmURg4() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5172,7 +5172,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Дочь")
-    public void sendRelationDegreelR4v6uLT() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreelR4v6uLT() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5203,7 +5203,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Друг/подруга")
-    public void sendRelationDegreevDPgw1Q6() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreevDPgw1Q6() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5234,7 +5234,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Другой родственник")
-    public void sendRelationDegreeC7ZMgbyc() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreeC7ZMgbyc() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5265,7 +5265,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Клиент")
-    public void sendRelationDegreeOVOxPkpx() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreeOVOxPkpx() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5296,7 +5296,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Коллега")
-    public void sendRelationDegreerDzqPVJr() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreerDzqPVJr() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5327,7 +5327,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Мать")
-    public void sendRelationDegreexKraP9DQ() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreexKraP9DQ() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5358,7 +5358,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Остальные")
-    public void sendRelationDegree0LilZJnc() throws IOException, JSONException, SQLException {
+    public void sendRelationDegree0LilZJnc() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5389,7 +5389,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Отец")
-    public void sendRelationDegreeekYxqj5U() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreeekYxqj5U() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5420,7 +5420,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Сын")
-    public void sendRelationDegree81dEVcZS() throws IOException, JSONException, SQLException {
+    public void sendRelationDegree81dEVcZS() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5451,7 +5451,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Сестра")
-    public void sendRelationDegreesDTKdM7Z() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreesDTKdM7Z() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5482,7 +5482,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Внук")
-    public void sendRelationDegreemtsgrandchild() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreemtsgrandchild() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
@@ -5513,7 +5513,7 @@ public class TestSendProfileOnline {
     @Test(dependsOnMethods = "sendStep3")
     @Feature("Отправка всех полей Д анкеты")
     @Story("Отправка Кем приходится контактное лицо Внучка")
-    public void sendRelationDegreemtsgrandchild2() throws IOException, JSONException, SQLException {
+    public void sendRelationDegreemtsgrandchild2() throws IOException, JSONException {
         send = BasePath + step3 + getTokenOfFile() + jsonOrderID + getIdOrderOfFile();
         response =
                 expect()
